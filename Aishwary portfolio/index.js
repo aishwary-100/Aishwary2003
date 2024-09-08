@@ -91,3 +91,19 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+
+            
+function downloadAndOpen() {
+    // Open the PDF in a new tab
+    window.open('./Aishwary Resume.pdf', '_blank');
+
+    // Create a temporary link to trigger the download
+    const link = document.createElement('a');
+    link.href = './Aishwary Resume.pdf';
+    link.download = 'Aishwarytiwar.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+
